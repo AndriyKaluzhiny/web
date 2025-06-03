@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 40px;
+  margin: 0;
+  line-height: 1;
+}
+
+.lastname {
+  font-weight: normal;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.contact {
+  text-align: right;
+  font-size: 14px;
+}
+
+.section {
+  border-top: 1px dotted black;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.section h2 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  gap: 40px;
+  border-top: 1px dotted black;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills li {
+  width: 45%;
+  margin: 5px 0;
+  position: relative;
+  padding-left: 12px;
+}
+
+.skills li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+.circles {
+  position: absolute;
+  top: -20px;
+  left: -40px;
+}
+
+.circles-bottom {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle.yellow {
+  background: #fcd34d;
+  top: 0;
+  left: 0;
+}
+
+.circle.blue {
+  background: #60a5fa;
+  top: 20px;
+  left: 60px;
+}

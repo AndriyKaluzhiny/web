@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Резюме — Калужний Андрій</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Калужний<br><span class="lastname">Андрій Юрійович</span></h1>
+            <div class="contact">
+                <p>+380 50 297 80 13</p>
+                <p>kaluzhnii.andrii@example.com</p>
+                <p>м. Львів, Україна</p>
+            </div>
+            <div class="circles">
+                <div class="circle yellow"></div>
+                <div class="circle blue"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>ОСВІТА</h2>
+            <p><strong>Національний університет "Львівська Політехніка"</strong></p>
+        </div>
+
+        <div class="section">
+            <h2>ДОСВІД РОБОТИ</h2>
+            <p><strong>ТОВ "AutoCity" (2024–2025)</strong><br>Менеджер з продажу</p>
+            <ul>
+                <li>Обзвін заявок</li>
+                <li>Покупка автомобілів на американських та європейських аукціонах</li>
+                <li>Надання інформації клієнту</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>НАВИЧКИ</h2>
+            <ul class="skills">
+                <li>Стресостійкість</li>
+                <li>Робота з CRM системами</li>
+                <li>Підбір авто</li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h2>МОВИ</h2>
+                <ul>
+                    <li>Українська — рідна</li>
+                    <li>Англійська — середній рівень</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>ДОДАТКОВА ІНФОРМАЦІЯ</h2>
+                <p>Відповідальний, уважний до деталей, легко навчаюсь новому.</p>
+            </div>
+        </div>
+
+        <div class="circles-bottom">
+            <div class="circle yellow"></div>
+            <div class="circle blue"></div>
+        </div>
+    </div>
+
+    <div class="saveInfoBlock">
+        <h1 class="saveInfoText">Зберегти та вивести Інформацію</h1>
+        <button id="saveButton" onclick="saveSystemInfoToLocalStorage()">Зберегти</button>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+
+<footer>
+    <pre id="output"></pre>
+</footer>
+</html>
