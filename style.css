@@ -106,6 +106,7 @@ body {
   background: #60a5fa;
   top: 20px;
   left: 60px;
+  z-index: -1;
 }
 
 .modal {
