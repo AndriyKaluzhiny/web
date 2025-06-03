@@ -107,3 +107,24 @@ body {
   top: 20px;
   left: 60px;
 }
+
+.modal {
+  display: block;
+}
+
+body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+
+    .dark-mode .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }

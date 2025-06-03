@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <title>Резюме — Калужний Андрій</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>    
 </head>
+<header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li onclick="changeTheme()" class="nav-item"><a href="#" class="nav-link active" aria-current="page">🌞 / 🌙</a></li>
+      </ul>
+    </header>
 <body>
     <div class="container">
         <div class="header">
@@ -64,15 +70,54 @@
         </div>
     </div>
 
-    <div class="saveInfoBlock">
-        <h1 class="saveInfoText">Зберегти та вивести Інформацію</h1>
-        <button id="saveButton" onclick="saveSystemInfoToLocalStorage()">Зберегти</button>
+    <div class="d-flex align-items-left comments-container">
+        <div class="comments">
+            <h2>Коментарі минулих роботодавців</h2>
+            <ul id="comments-list"></ul>
+                
+        </div>
     </div>
+
+<div class="modal show" tabindex="-1" id="feedbackModal" style="background-color: rgba(0,0,0,0.5); display: none;">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Зворотній зв'язок</h5>
+        <button type="button" class="btn-close" onclick="closeModal()"></button>
+      </div>
+      <form action="https://formspree.io/f/xeokqwod" method="POST">
+        <div class="modal-body">
+          <div class="mb-3">
+            <input type="text" class="form-control" name="name" placeholder="Ваше ім'я" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Ваш Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" name="message" rows="4" placeholder="Ваше повідомлення..." required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Надіслати</button>
+          <button type="button" class="btn btn-secondary" onclick="closeModal()">Закрити</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
     
-    <script src="main.js"></script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 <footer>
-    <pre id="output"></pre>
+    <div class="saveInfoBlock d-flex flex-column align-items-center">
+    <p class="fs-3">З якого браузера я зайшов: </p><p id="platform"></p>
+    <button id="saveButton" class="btn btn-secondary" onclick="saveSystemInfoToLocalStorage()">Дізнатись</button>
+    </div>
+    
 </footer>
 </html>
