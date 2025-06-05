@@ -61,5 +61,5 @@ window.onload = function() {
         console.error('Помилка при отриманні коментарів:', error);
       });
 
-      autoApplyTheme
+      autoApplyTheme();
 }
