@@ -11,25 +11,6 @@ function saveSystemInfoToLocalStorage() {
   document.getElementById('platform').textContent = systemInfo.platform;
 }
 
-window.onload = function() { 
-    const variantNumber = 10;
-    const url = `https://jsonplaceholder.typicode.com/posts/${variantNumber}/comments`;
-
-     fetch(url)
-      .then(response => response.json())
-      .then(comments => {
-        const list = document.getElementById('comments-list');
-        comments.forEach(comment => {
-          const li = document.createElement('li');
-          li.innerHTML = `<strong>${comment.name}</strong> (${comment.email}):<br>${comment.body}`;
-          list.appendChild(li);
-        });
-      })
-      .catch(error => {
-        console.error('Помилка при отриманні коментарів:', error);
-      });
-}
-
 function closeModal() {
   const modal = document.getElementById('feedbackModal');
   modal.style.display = 'none';
@@ -62,6 +43,21 @@ function autoApplyTheme() {
     }
 }
 
-window.onload = function() {
-    autoApplyTheme();
+window.onload = function() { 
+    const variantNumber = 10;
+    const url = `https://jsonplaceholder.typicode.com/posts/${variantNumber}/comments`;
+
+     fetch(url)
+      .then(response => response.json())
+      .then(comments => {
+        const list = document.getElementById('comments-list');
+        comments.forEach(comment => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${comment.name}</strong> (${comment.email}):<br>${comment.body}`;
+          list.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('Помилка при отриманні коментарів:', error);
+      });
 }
