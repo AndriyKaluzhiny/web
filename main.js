@@ -60,4 +60,6 @@ window.onload = function() {
       .catch(error => {
         console.error('Помилка при отриманні коментарів:', error);
       });
+
+      autoApplyTheme
 }
